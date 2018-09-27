@@ -5,14 +5,19 @@
  */
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 // import PropTypes from 'prop-types';
 // import styled from 'styled-components';
 
 function Nav() {
   return (
     <div>
-      <button>Home</button>
-      <button>Notes</button>
+      <Link to="/">
+        <button>Home</button>
+      </Link>
+      <Link to="/notes">
+        <button>Notes</button>
+      </Link>
     </div>
   );
 }
