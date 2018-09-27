@@ -14,14 +14,18 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
+import Nav from '../../components/Nav';
+import NoteList from 'containers/NoteList/Loadable';
 import HomePage from 'containers/HomePage/Loadable';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
 
 export default function App() {
   return (
     <div>
+      <Nav />
       <Switch>
         <Route exact path="/" component={HomePage} />
+        <Route path="/notes" component={NoteList} />
         <Route component={NotFoundPage} />
       </Switch>
     </div>
